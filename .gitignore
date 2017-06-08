@@ -12,9 +12,12 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-/config/database.yml
 
 /node_modules
 /yarn-error.log
 
 .byebug_history
+
+#Ignore secrets and db connection
+/config/database.yml
+/config/secrets.yml
