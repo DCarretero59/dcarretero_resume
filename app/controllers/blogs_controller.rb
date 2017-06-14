@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /blogs
   # GET /blogs.json
@@ -60,6 +60,19 @@ class BlogsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def toggle_status
+    if @blog.draft?
+      success = @blog.published!
+    elsif @blog.published?
+      success = @blog.draft!
+    end
+    
+
+    redirect_to blogs_url, notice: success ? 'Blog status successfully updated.': 'Error updating blog status.'
+
+    
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
