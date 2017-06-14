@@ -7,4 +7,5 @@ class Blog < ApplicationRecord
     published: 1
   }
   validates_presence_of :title, :body
+  belongs_to :topic
 end
