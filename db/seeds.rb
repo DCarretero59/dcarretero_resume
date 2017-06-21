@@ -34,3 +34,10 @@ puts "5 skills posts created"
 end
 
 puts "9 portfolio items created created"
+
+15.times do 
+  Portfolio.order("RAND()").first.technologies.create!(
+    name: Faker::App.name
+  )
+end
+puts "3 technologies created"
