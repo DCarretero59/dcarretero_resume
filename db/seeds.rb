@@ -1,7 +1,15 @@
+3.times do 
+  Topic.create!(
+    title: Faker::Book.title
+  )
+end
+puts "3 topics created"
+
 10.times do |blog|
   Blog.create!(
     title: Faker::Robin.quote,
-    body: Faker::Lorem.paragraph
+    body: Faker::Lorem.paragraph,
+    topic_id: Topic.order("RAND()").first.id
   )
 end
 
