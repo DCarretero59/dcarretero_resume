@@ -1,7 +1,15 @@
+3.times do 
+  Topic.create!(
+    title: Faker::Book.title
+  )
+end
+puts "3 topics created"
+
 10.times do |blog|
   Blog.create!(
     title: Faker::Robin.quote,
-    body: Faker::Lorem.paragraph
+    body: Faker::Lorem.paragraph,
+    topic_id: Topic.order("RAND()").first.id
   )
 end
 
@@ -26,3 +34,10 @@ puts "5 skills posts created"
 end
 
 puts "9 portfolio items created created"
+
+15.times do 
+  Portfolio.order("RAND()").first.technologies.create!(
+    name: Faker::App.name
+  )
+end
+puts "3 technologies created"

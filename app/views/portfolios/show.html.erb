@@ -3,6 +3,15 @@
 <p><%= @item.title %></p>
 <p><%= @item.subtitle %></p>
 <p><%= @item.body %></p>
-<%= image_tag @item.thumb_image unless @item.thumb_image.nil?  %>
+<%= image_tag @item.main_image unless @item.main_image.nil?  %>
+
+<h2>Technologies Used</h2>
+<ul>
+    <% @item.technologies.each do |technology| %>
+      <li>
+        <%= technology.name %>
+      </li>
+    <% end %>
+</ul>
 
 <%= link_to 'Back',  portfolios_path%>
