@@ -1,0 +1,7 @@
+<p><%= portfolio_item.title %></p>
+<p><%= portfolio_item.subtitle %></p>
+<p><%= portfolio_item.body %></p>
+<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+<%= link_to 'See', portfolio_show_path(portfolio_item) %>
+<%= link_to 'Edit', edit_portfolio_path(portfolio_item) %>
+<%= link_to 'Delete', p, method: :delete, data: { confirm: 'Delete?' }%>
