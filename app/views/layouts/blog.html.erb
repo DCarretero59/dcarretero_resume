@@ -17,7 +17,7 @@
     <%= yield %>
     
       <%= render "shared/nav" %>
-    <hr/>
-    <%= "Thanks for visiting me from #{session[:source]}" if session[:source] %>
+      
+    <%= source_helper %>
   </body>
 </html>
