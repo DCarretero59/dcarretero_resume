@@ -6,6 +6,12 @@ GIT
       i18n (~> 0.5)
 
 GIT
+  remote: https://github.com/DCarretero59/dcarretero_view_tool
+  revision: 4541ba5fd0880171d24d7fa4d5ea6bc2313c6396
+  specs:
+    dcarretero_view_tool (0.1.0)
+
+GIT
   remote: https://github.com/twbs/bootstrap-rubygem
   revision: bd3d58a56c46d1f87785298706b136b73c192b8b
   specs:
@@ -223,6 +229,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  dcarretero_view_tool!
   devise (~> 4.3)
   faker!
   friendly_id (~> 5.1.0)

@@ -38,6 +38,7 @@ gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.3'
 gem 'jquery-rails'
+gem 'dcarretero_view_tool', git: 'https://github.com/DCarretero59/dcarretero_view_tool'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
